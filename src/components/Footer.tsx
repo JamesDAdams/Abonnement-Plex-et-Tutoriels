@@ -1,0 +1,66 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin } from 'lucide-react';
+const Footer = () => {
+  return <footer className="bg-gray-800 text-white pt-10 pb-6" id="contact">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">ServeurPlus</h3>
+            <p className="text-gray-300 mb-4">
+              Votre solution complète pour le divertissement numérique et le
+              stockage sécurisé.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Liens rapides</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                  Accueil
+                </Link>
+              </li>
+              <li>
+                <a href="#abonnements" className="text-gray-300 hover:text-white transition-colors">
+                  Abonnements
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#tutoriels" className="text-gray-300 hover:text-white transition-colors">
+                  Tutoriels
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <Mail size={18} className="mr-2" />
+                <span className="text-gray-300">contact@serveurplus.fr</span>
+              </li>
+              <li className="flex items-center">
+                <Phone size={18} className="mr-2" />
+                <span className="text-gray-300">+33 1 23 45 67 89</span>
+              </li>
+              <li className="flex items-center">
+                <MapPin size={18} className="mr-2" />
+                <span className="text-gray-300">France</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+          <p>
+            &copy; {new Date().getFullYear()} ServeurPlus. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </footer>;
+};
+export default Footer;
