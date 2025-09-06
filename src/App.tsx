@@ -8,21 +8,24 @@ import NextcloudTutorial from './pages/tutorials/NextcloudTutorial';
 import BitwardenTutorial from './pages/tutorials/BitwardenTutorial';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 export function App() {
-  return <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/tutoriels/plex" element={<PlexTutorial />} />
-            <Route path="/tutoriels/overseerr" element={<OverseerrTutorial />} />
-            <Route path="/tutoriels/komga" element={<KomgaTutorial />} />
-            <Route path="/tutoriels/nextcloud" element={<NextcloudTutorial />} />
-            <Route path="/tutoriels/bitwarden" element={<BitwardenTutorial />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>;
+  return <ThemeProvider>
+      <BrowserRouter>
+        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+          <Header />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tutoriels/plex" element={<PlexTutorial />} />
+              <Route path="/tutoriels/overseerr" element={<OverseerrTutorial />} />
+              <Route path="/tutoriels/komga" element={<KomgaTutorial />} />
+              <Route path="/tutoriels/nextcloud" element={<NextcloudTutorial />} />
+              <Route path="/tutoriels/bitwarden" element={<BitwardenTutorial />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>;
 }
