@@ -4,41 +4,27 @@ const plans = [{
   name: 'Basique',
   price: '5€',
   period: 'par mois',
-  features: [
-    'Accès à Plex (Films et Séries)',
-    '1 demande de film par jour',
-    '1 demande de série par jour',
-    '1 utilisateur'
-  ],
+  features: ['Accès à Plex (Films et Séries)', '1 demande de film par jour', '1 demande de série par jour', '1 utilisateur'],
   highlighted: false
 }, {
   name: 'Standard',
   price: '10€',
   period: 'par mois',
-  features: [
-    'Accès à Plex (Films et Séries)',
-    'Accès à Komga (Livres et BD)',
-    '5 demandes de film par jour',
-    '3 demandes de série par jour',
-    '2 utilisateurs',
-    'Accès à Bitwarden (gestionnaire de mdp)'
-  ],
+  features: ['Accès à Plex (Films et Séries)', 'Accès à Komga (Livres et BD)', '5 demandes de film par jour', '3 demandes de série par jour', '2 utilisateurs', 'Accès à Bitwarden (gestionnaire de mdp)'],
   highlighted: true
 }, {
   name: 'Premium',
   price: '15€',
   period: 'par mois',
-  features: [
-    'Accès à Plex (Films et Séries)',
-    'Accès à Komga (Livres et BD)',
-    '10 demandes de film par jour',
-    '5 demandes de série par jour',
-    '5 utilisateurs',
-    'Accès à Bitwarden (gestionnaire de mdp)'
-  ],
+  features: ['Accès à Plex (Films et Séries)', 'Accès à Komga (Livres et BD)', '10 demandes de film par jour', '5 demandes de série par jour', '5 utilisateurs', 'Accès à Bitwarden (gestionnaire de mdp)'],
   highlighted: false
-},
-];
+}, {
+  name: 'Famille',
+  price: '25€',
+  period: 'par mois',
+  features: ['Accès à Plex (Films et Séries)', 'Accès à Komga (Livres et BD)', 'Accès à Nextcloud (stockage 100Go)', 'Demandes illimitées de films', 'Demandes illimitées de séries', '10 utilisateurs', 'Accès à Bitwarden (gestionnaire de mdp)', 'Support prioritaire 24/7'],
+  highlighted: false
+}];
 const SubscriptionPlans = () => {
   return <section className="py-16 bg-white" id="abonnements">
       <div className="container mx-auto px-4">
@@ -49,8 +35,8 @@ const SubscriptionPlans = () => {
           Choisissez la formule qui correspond le mieux à vos besoins et
           profitez immédiatement de nos services.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {plans.map((plan, index) => <div key={index} className={`rounded-lg shadow-lg overflow-hidden ${plan.highlighted ? 'border-2 border-indigo-500 transform scale-105 md:scale-110 z-10' : 'border border-gray-200'}`}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {plans.map((plan, index) => <div key={index} className={`rounded-lg shadow-lg overflow-hidden ${plan.highlighted ? 'border-2 border-indigo-500 transform scale-105 md:scale-105 z-10' : 'border border-gray-200'}`}>
               <div className={`p-6 ${plan.highlighted ? 'bg-indigo-500 text-white' : 'bg-gray-50 text-gray-800'}`}>
                 <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
                 <div className="flex items-end">
