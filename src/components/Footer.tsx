@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">ServeurPlus</h3>
+            <h3 className="text-xl font-semibold mb-4">JamesServer</h3>
             <p className="text-gray-300 dark:text-gray-400 mb-4">
               Votre solution complète pour le divertissement numérique et le
               stockage sécurisé.
@@ -43,7 +43,7 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail size={18} className="mr-2" />
                 <span className="text-gray-300 dark:text-gray-400">
-                  contact@serveurplus.fr
+                  contact@JamesServer.fr
                 </span>
               </li>
               <li className="flex items-center">
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} ServeurPlus. Tous droits réservés.
+            &copy; {new Date().getFullYear()} JamesServer. Tous droits réservés.
           </p>
         </div>
       </div>

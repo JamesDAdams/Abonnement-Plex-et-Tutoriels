@@ -48,8 +48,13 @@ const SubscriptionPlans = () => {
                     </li>)}
                 </ul>
                 <p className="mt-4 text-sm text-center text-gray-600 dark:text-gray-300">
-                  Option 4K 5€
+                  Option Plex 4K 5€
                 </p>
+                {plan.name === 'Premium' && (
+                  <p className="mt-1 text-sm text-center text-gray-600 dark:text-gray-300">
+                    Option Nextcloud 1To 5€
+                  </p>
+                )}
                 <button className={`w-full py-4 rounded-lg mt-8 font-semibold text-lg ${plan.highlighted ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500'} transition-colors`}>
                   Sélectionner
                 </button>

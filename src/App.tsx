@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 export function App() {
   return <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
           <Header />
           <main className="flex-grow">

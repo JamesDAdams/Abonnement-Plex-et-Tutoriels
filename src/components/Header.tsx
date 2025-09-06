@@ -7,7 +7,7 @@ const Header = () => {
   return <header className="bg-indigo-700 dark:bg-indigo-900 text-white shadow-md transition-colors duration-200">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">
-          ServeurPlus
+          JamesServer
         </Link>
         <div className="flex items-center space-x-4">
           {/* Theme Toggle */}
