@@ -4,21 +4,41 @@ const plans = [{
   name: 'Basique',
   price: '5€',
   period: 'par mois',
-  features: ['Accès à Plex (Films et Séries)', 'Support par email', '1 utilisateur'],
+  features: [
+    'Accès à Plex (Films et Séries)',
+    '1 demande de film par jour',
+    '1 demande de série par jour',
+    '1 utilisateur'
+  ],
   highlighted: false
 }, {
   name: 'Standard',
   price: '10€',
   period: 'par mois',
-  features: ['Accès à Plex (Films et Séries)', 'Accès à Overseerr (Demandes)', 'Accès à Komga (Livres et BD)', 'Support prioritaire', '2 utilisateurs'],
+  features: [
+    'Accès à Plex (Films et Séries)',
+    'Accès à Komga (Livres et BD)',
+    '5 demandes de film par jour',
+    '3 demandes de série par jour',
+    '2 utilisateurs',
+    'Accès à Bitwarden (gestionnaire de mdp)'
+  ],
   highlighted: true
 }, {
   name: 'Premium',
   price: '15€',
   period: 'par mois',
-  features: ['Accès à Plex (Films et Séries)', 'Accès à Overseerr (Demandes)', 'Accès à Komga (Livres et BD)', 'Accès à Nextcloud (Stockage)', 'Accès à Bitwarden (Mots de passe)', 'Support prioritaire 24/7', '5 utilisateurs'],
+  features: [
+    'Accès à Plex (Films et Séries)',
+    'Accès à Komga (Livres et BD)',
+    '10 demandes de film par jour',
+    '5 demandes de série par jour',
+    '5 utilisateurs',
+    'Accès à Bitwarden (gestionnaire de mdp)'
+  ],
   highlighted: false
-}];
+},
+];
 const SubscriptionPlans = () => {
   return <section className="py-16 bg-white" id="abonnements">
       <div className="container mx-auto px-4">
