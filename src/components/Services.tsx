@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import { Film, Search, Book, Cloud, Lock } from 'lucide-react';
+import { Film, Search, Book, Cloud, Lock, Activity, BarChart } from 'lucide-react';
 const Services = () => {
   const services = [{
     title: 'Plex',
@@ -32,6 +32,20 @@ const Services = () => {
     icon: <Lock size={24} />,
     tutorialLink: '/tutoriels/bitwarden',
     color: 'bg-red-500'
+  },
+  {
+    title: 'Tautulli',
+    description: "Consultez l'historique de visionnage et les activités détaillées de votre serveur Plex.",
+    icon: <Activity size={24} />,
+    tutorialLink: '/tutoriels/tautulli',
+    color: 'bg-yellow-500'
+  },
+  {
+    title: 'PlexRewind',
+    description: 'Statistiques et récapitulatifs sur votre utilisation Plex, en un clin d’œil.',
+    icon: <BarChart size={24} />,
+    tutorialLink: '/tutoriels/plexrewind',
+    color: 'bg-indigo-500'
   }];
   return <section className="py-16 bg-gray-50" id="services">
       <div className="container mx-auto px-4">
