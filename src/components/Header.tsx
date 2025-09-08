@@ -10,8 +10,6 @@ const Header = () => {
           JamesServer
         </Link>
         <div className="flex items-center space-x-4">
-          {/* Theme Toggle */}
-          <ThemeToggle />
           {/* Mobile menu button */}
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
@@ -75,9 +73,6 @@ const Header = () => {
             </div>
             <a href="#abonnements" className="hover:text-indigo-200 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Abonnements
-            </a>
-            <a href="#contact" className="hover:text-indigo-200 transition-colors" onClick={() => setIsMenuOpen(false)}>
-              Contact
             </a>
           </div>
         </nav>}
