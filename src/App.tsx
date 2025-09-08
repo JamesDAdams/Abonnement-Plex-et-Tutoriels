@@ -24,7 +24,6 @@ export function App() {
               <Route path="/tutoriels/bitwarden" element={<BitwardenTutorial />} />
             </Routes>
           </main>
-          <Footer />
         </div>
       </BrowserRouter>
     </ThemeProvider>;
