@@ -46,9 +46,6 @@ const Header = () => {
             <a href="#abonnements" className="hover:text-indigo-200 transition-colors">
               Abonnements
             </a>
-            <a href="#contact" className="hover:text-indigo-200 transition-colors">
-              Contact
-            </a>
           </nav>
         </div>
       </div>
