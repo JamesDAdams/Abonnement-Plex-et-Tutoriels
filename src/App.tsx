@@ -7,7 +7,6 @@ import KomgaTutorial from './pages/tutorials/KomgaTutorial';
 import NextcloudTutorial from './pages/tutorials/NextcloudTutorial';
 import BitwardenTutorial from './pages/tutorials/BitwardenTutorial';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 export function App() {
   return <ThemeProvider>
@@ -24,7 +23,6 @@ export function App() {
               <Route path="/tutoriels/bitwarden" element={<BitwardenTutorial />} />
             </Routes>
           </main>
-          <Footer />
         </div>
       </BrowserRouter>
     </ThemeProvider>;
