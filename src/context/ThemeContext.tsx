@@ -9,13 +9,14 @@ export const ThemeProvider: React.FC<{
 }> = ({
   children
 }) => {
-  // Check if user previously enabled dark mode
+  // Always default to dark mode for Plex-like experience
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('theme');
-      return savedTheme === 'dark' || !savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      // Default to dark mode if not explicitly set to light
+      return savedTheme !== 'light';
     }
-    return false;
+    return true;
   });
   // Update the HTML class and localStorage when dark mode changes
   useEffect(() => {

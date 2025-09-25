@@ -45,12 +45,12 @@ const Services = () => {
     tutorialLink: '/tutoriels/plexrewind',
     color: 'bg-indigo-500'
   }];
-  return <section className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-200" id="services">
+  return <section className="py-16 bg-black transition-colors duration-200" id="services">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-orange-500">
           Nos Services
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+        <p className="text-gray-400 text-center mb-12 max-w-3xl mx-auto">
           Découvrez tous les services inclus dans votre abonnement et comment
           ils peuvent améliorer votre expérience numérique.
         </p>

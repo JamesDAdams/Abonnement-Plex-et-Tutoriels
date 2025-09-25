@@ -12,7 +12,7 @@ import { ThemeProvider } from './context/ThemeContext';
 export function App() {
   return <ThemeProvider>
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+        <div className="flex flex-col min-h-screen bg-black dark:bg-black text-gray-100 transition-colors duration-200">
           <Header />
           <main className="flex-grow">
             <Routes>

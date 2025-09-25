@@ -1,60 +1,180 @@
 import React from 'react';
 import { Check } from 'lucide-react';
-const plans = [{
-  name: 'Basique',
-  price: '5€',
-  period: 'par mois',
-  features: ['Accès à Plex (Films et Séries)', '1 demande de film par jour', '1 demande de série par jour', '1 utilisateur'],
-  highlighted: false
-}, {
-  name: 'Standard',
-  price: '10€',
-  period: 'par mois',
-  features: ['Accès à Plex (Films et Séries)', 'Accès à Komga (Livres et BD)', '5 demandes de film par jour', '3 demandes de série par jour', '2 utilisateurs', 'Accès à Bitwarden (gestionnaire de mdp)'],
-  highlighted: true
-}, {
-  name: 'Premium',
-  price: '15€',
-  period: 'par mois',
-  features: ['Accès à Plex (Films et Séries)', 'Accès à Komga (Livres et BD)', '10 demandes de film par jour', '5 demandes de série par jour', '3 utilisateurs', 'Accès à Bitwarden (gestionnaire de mdp)', 'Accès à Nextcloud (Stockage 100Go/personnes)'],
-  highlighted: false
-}];
 const SubscriptionPlans = () => {
-  return <section className="py-16 bg-white dark:bg-gray-800 transition-colors duration-200" id="abonnements">
+  return <section className="py-16 bg-gray-900 text-white transition-colors duration-200" id="abonnements">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 dark:text-white">
-          Nos Formules d'Abonnement
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-orange-500">
+          Sélectionnez votre abonnement
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto text-lg">
-          Choisissez la formule qui correspond le mieux à vos besoins et
-          profitez immédiatement de nos services.
+        <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto text-lg">
+          Abonnez-vous jusqu'au 27 septembre et économisez sur un abonnement
+          mensuel pendant 3 mois !
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center">
-          {plans.map((plan, index) => <div key={index} className={`w-full max-w-md rounded-lg shadow-lg overflow-hidden ${plan.highlighted ? 'border-2 border-indigo-500 transform scale-105 md:scale-105 z-10' : 'border border-gray-200 dark:border-gray-600'}`}>
-              <div className={`p-8 ${plan.highlighted ? 'bg-indigo-500 text-white' : 'bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white'}`}>
-                <h3 className="text-3xl font-bold mb-1">{plan.name}</h3>
-                <div className="flex items-end">
-                  <span className="text-5xl font-bold">{plan.price}</span>
-                  <span className="ml-1 text-base opacity-80">
-                    {plan.period}
-                  </span>
-                </div>
+        <div className="max-w-6xl mx-auto overflow-x-auto">
+          {/* Plans Header */}
+          <div className="grid grid-cols-4 gap-4 mb-6">
+            <div className="col-span-1"></div>
+            <div className="col-span-1">
+              <div className="bg-orange-600 text-white p-4 rounded-md text-center">
+                <h3 className="text-xl font-bold">BASIQUE</h3>
               </div>
-              <div className="p-8 bg-white dark:bg-gray-700">
-                <ul className="space-y-4">
-                  {plan.features.map((feature, i) => <li key={i} className="flex items-start">
-                      <Check size={20} className="text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="dark:text-gray-200">{feature}</span>
-                    </li>)}
-                </ul>
-                <p className="mt-4 text-sm text-center text-gray-600 dark:text-gray-300">
-                  Option 4K 5€
-                </p>
-                <button className={`w-full py-4 rounded-lg mt-8 font-semibold text-lg ${plan.highlighted ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500'} transition-colors`}>
-                  Sélectionner
-                </button>
+              <div className="text-center mt-4">
+                <p className="text-xl font-bold">5€/mois</p>
+                <p className="text-sm text-orange-500">Économisez 3,00 €*</p>
               </div>
-            </div>)}
+              <p className="text-center mt-2 text-lg">59,90 € / an</p>
+            </div>
+            <div className="col-span-1">
+              <div className="bg-orange-600 text-white p-4 rounded-md text-center">
+                <h3 className="text-xl font-bold">STANDARD</h3>
+              </div>
+              <div className="text-center mt-4">
+                <p className="text-xl font-bold">10€/mois</p>
+                <p className="text-sm text-orange-500">Économisez 4,00 €*</p>
+              </div>
+              <p className="text-center mt-2 text-lg">99,90 € / an</p>
+            </div>
+            <div className="col-span-1">
+              <div className="bg-orange-600 text-white p-4 rounded-md text-center">
+                <h3 className="text-xl font-bold">PREMIUM</h3>
+              </div>
+              <div className="text-center mt-4">
+                <p className="text-xl font-bold">15€/mois</p>
+                <p className="text-sm text-orange-500">Économisez 4,00 €*</p>
+              </div>
+              <p className="text-center mt-2 text-lg">139,90 € / an</p>
+            </div>
+          </div>
+          {/* Features Table */}
+          <div className="border-t border-gray-800">
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Accès à Plex (Films et Séries)
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Qualité vidéo jusqu'à
+              </div>
+              <div className="col-span-1 text-center">1080p Full HD</div>
+              <div className="col-span-1 text-center">1080p Full HD</div>
+              <div className="col-span-1 text-center">4K Ultra HD et HDR</div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Accès à Komga (Livres et BD)
+              </div>
+              <div className="col-span-1 text-center">
+                <div className="w-6 h-0.5 bg-gray-600 mx-auto"></div>
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Demandes de films par jour
+              </div>
+              <div className="col-span-1 text-center">1</div>
+              <div className="col-span-1 text-center">5</div>
+              <div className="col-span-1 text-center">10</div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Demandes de séries par jour
+              </div>
+              <div className="col-span-1 text-center">1</div>
+              <div className="col-span-1 text-center">3</div>
+              <div className="col-span-1 text-center">5</div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Utilisateurs simultanés
+              </div>
+              <div className="col-span-1 text-center">1</div>
+              <div className="col-span-1 text-center">2</div>
+              <div className="col-span-1 text-center">3</div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Accès à Bitwarden (gestionnaire de mdp)
+              </div>
+              <div className="col-span-1 text-center">
+                <div className="w-6 h-0.5 bg-gray-600 mx-auto"></div>
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">
+                Accès à Nextcloud (Stockage)
+              </div>
+              <div className="col-span-1 text-center">
+                <div className="w-6 h-0.5 bg-gray-600 mx-auto"></div>
+              </div>
+              <div className="col-span-1 text-center">
+                <div className="w-6 h-0.5 bg-gray-600 mx-auto"></div>
+              </div>
+              <div className="col-span-1 text-center">
+                <Check size={24} className="text-orange-500 mx-auto" />{' '}
+                100Go/personne
+              </div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">Option Plex 4K</div>
+              <div className="col-span-1 text-center">+5€</div>
+              <div className="col-span-1 text-center">+5€</div>
+              <div className="col-span-1 text-center">Inclus</div>
+            </div>
+            <div className="grid grid-cols-4 gap-4 py-6 border-b border-gray-800">
+              <div className="col-span-1 font-medium">Option Nextcloud 1To</div>
+              <div className="col-span-1 text-center">
+                <div className="w-6 h-0.5 bg-gray-600 mx-auto"></div>
+              </div>
+              <div className="col-span-1 text-center">
+                <div className="w-6 h-0.5 bg-gray-600 mx-auto"></div>
+              </div>
+              <div className="col-span-1 text-center">+5€</div>
+            </div>
+          </div>
+          {/* Buttons */}
+          <div className="grid grid-cols-4 gap-4 mt-8">
+            <div className="col-span-1"></div>
+            <div className="col-span-1">
+              <button className="w-full py-4 bg-orange-600 hover:bg-orange-500 text-white font-semibold rounded-md transition-colors">
+                Souscrire
+              </button>
+            </div>
+            <div className="col-span-1">
+              <button className="w-full py-4 bg-orange-600 hover:bg-orange-500 text-white font-semibold rounded-md transition-colors">
+                Souscrire
+              </button>
+            </div>
+            <div className="col-span-1">
+              <button className="w-full py-4 bg-orange-600 hover:bg-orange-500 text-white font-semibold rounded-md transition-colors">
+                Souscrire
+              </button>
+            </div>
+          </div>
+          <p className="text-sm text-gray-400 mt-6 text-center">
+            *Économies calculées sur la base du tarif mensuel standard
+          </p>
         </div>
       </div>
     </section>;

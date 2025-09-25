@@ -17,7 +17,7 @@ const NextcloudTutorial = () => {
           Pour accéder à votre espace Nextcloud, utilisez l'adresse URL que nous
           vous avons fournie lors de votre inscription (généralement{' '}
           <span className="font-mono text-sm bg-gray-100 p-1 rounded">
-            https://cloud.serveurplus.fr
+            https://cloud.JamesServer.fr
           </span>{' '}
           ou similaire).
         </p>
@@ -156,7 +156,7 @@ const NextcloudTutorial = () => {
           <li>Installez et lancez l'application</li>
           <li>
             Entrez l'adresse de notre serveur Nextcloud
-            (https://cloud.serveurplus.fr)
+            (https://cloud.JamesServer.fr)
           </li>
           <li>Connectez-vous avec vos identifiants</li>
           <li>Choisissez les dossiers à synchroniser</li>
@@ -247,7 +247,7 @@ const NextcloudTutorial = () => {
         <p>
           Si vous rencontrez des problèmes avec Nextcloud ou si vous avez des
           questions sur l'utilisation du service, n'hésitez pas à nous contacter
-          à support@serveurplus.fr.
+          à support@JamesServer.fr.
         </p>
       </div>
     </TutorialLayout>;

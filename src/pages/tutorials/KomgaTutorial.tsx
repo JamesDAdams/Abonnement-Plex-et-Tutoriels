@@ -16,7 +16,7 @@ const KomgaTutorial = () => {
           Pour accéder à Komga, utilisez l'adresse URL que nous vous avons
           fournie lors de votre inscription (généralement{' '}
           <span className="font-mono text-sm bg-gray-100 p-1 rounded">
-            https://books.serveurplus.fr
+            https://books.JamesServer.fr
           </span>{' '}
           ou similaire).
         </p>
@@ -170,7 +170,7 @@ const KomgaTutorial = () => {
         <p>
           Si vous rencontrez des problèmes avec Komga ou si vous avez des
           questions sur l'utilisation du service, n'hésitez pas à nous contacter
-          à support@serveurplus.fr.
+          à support@JamesServer.fr.
         </p>
       </div>
     </TutorialLayout>;
