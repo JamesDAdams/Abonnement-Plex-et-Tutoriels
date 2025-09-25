@@ -7,9 +7,11 @@ const Header = () => {
   return <header className="bg-indigo-700 dark:bg-indigo-900 text-white shadow-md transition-colors duration-200">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold">
-          JamesServer
+          ServeurPlus
         </Link>
         <div className="flex items-center space-x-4">
+          {/* Theme Toggle */}
+          <ThemeToggle />
           {/* Mobile menu button */}
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
@@ -44,6 +46,9 @@ const Header = () => {
             <a href="#abonnements" className="hover:text-indigo-200 transition-colors">
               Abonnements
             </a>
+            <a href="#contact" className="hover:text-indigo-200 transition-colors">
+              Contact
+            </a>
           </nav>
         </div>
       </div>
@@ -73,6 +78,9 @@ const Header = () => {
             </div>
             <a href="#abonnements" className="hover:text-indigo-200 transition-colors" onClick={() => setIsMenuOpen(false)}>
               Abonnements
+            </a>
+            <a href="#contact" className="hover:text-indigo-200 transition-colors" onClick={() => setIsMenuOpen(false)}>
+              Contact
             </a>
           </div>
         </nav>}

@@ -117,7 +117,7 @@ const PlexTutorial = () => {
         <h2 className="mt-8">Besoin d'aide ?</h2>
         <p>
           Si vous rencontrez des problèmes ou avez des questions, n'hésitez pas
-          à nous contacter par email à support@JamesServer.fr.
+          à nous contacter par email à support@serveurplus.fr.
         </p>
       </div>
     </TutorialLayout>;

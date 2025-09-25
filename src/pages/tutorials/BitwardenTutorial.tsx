@@ -39,7 +39,7 @@ const BitwardenTutorial = () => {
             Accédez à notre instance Bitwarden à l'adresse URL fournie
             (généralement{' '}
             <span className="font-mono text-sm bg-gray-100 p-1 rounded">
-              https://vault.JamesServer.fr
+              https://vault.serveurplus.fr
             </span>
             )
           </li>
@@ -134,7 +134,7 @@ const BitwardenTutorial = () => {
           <li>
             Entrez l'URL de notre serveur :{' '}
             <span className="font-mono text-sm bg-gray-100 p-1 rounded">
-              https://vault.JamesServer.fr
+              https://vault.serveurplus.fr
             </span>
           </li>
           <li>Connectez-vous ensuite avec vos identifiants</li>
@@ -299,7 +299,7 @@ const BitwardenTutorial = () => {
         <p>
           Si vous rencontrez des problèmes avec Bitwarden ou si vous avez des
           questions sur l'utilisation du service, n'hésitez pas à nous contacter
-          à support@JamesServer.fr.
+          à support@serveurplus.fr.
         </p>
       </div>
     </TutorialLayout>;

@@ -16,7 +16,7 @@ const OverseerrTutorial = () => {
           Pour accéder à Overseerr, utilisez l'adresse URL que nous vous avons
           fournie lors de votre inscription (généralement{' '}
           <span className="font-mono text-sm bg-gray-100 p-1 rounded">
-            https://requests.JamesServer.fr
+            https://requests.serveurplus.fr
           </span>{' '}
           ou similaire).
         </p>
@@ -122,7 +122,7 @@ const OverseerrTutorial = () => {
         <h2 className="mt-8">Besoin d'aide ?</h2>
         <p>
           Si vous rencontrez des problèmes avec Overseerr ou si vous avez des
-          questions sur vos demandes, contactez-nous à support@JamesServer.fr.
+          questions sur vos demandes, contactez-nous à support@serveurplus.fr.
         </p>
       </div>
     </TutorialLayout>;
